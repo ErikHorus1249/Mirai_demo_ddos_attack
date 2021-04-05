@@ -1,0 +1,16 @@
+version: "3.3"
+    
+services:
+  db:
+    build: .
+    container_name: mirrai_server_1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: miraidemo
+      MYSQL_DATABASE: mirai
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports: 
+      - 3306:3306
+volumes:
+  db_data: {}
